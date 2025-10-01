@@ -23,3 +23,50 @@ if (gold >= buildingCoast) {
 	console.log("Not completed");
 	console.log(`Amount: ${gold}`);
 }
+
+function createHouse(name, cost) {
+	if (gold >= cost) {
+		gold -= cost;
+		console.log(`${name} completed`);
+	} else {
+		console.log(`${name}Not completed`);
+	}
+	console.log(`Amount: ${gold}`);
+}
+
+createHouse("House", 65);
+createHouse("Garage", 12);
+
+
+
+
+
+
+function getSalary(amount, salary) {
+	amount += salary;
+	console.log(`Total amount: ${gold}`);
+}
+
+getSalary(20);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
