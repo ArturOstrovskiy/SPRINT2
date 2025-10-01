@@ -4,8 +4,8 @@ let buildingCoast = 64;
 
 console.log(`Amount: ${gold}`);
 if (gold >= buildingCoast) {
-gold -= buildingCoast;
-console.log(`${buildingName} completed`);
+	gold -= buildingCoast;
+	console.log(`${buildingName} completed`);
 	console.log(`Amount: ${gold}`);
 } else {
 	console.log("Not completed");
