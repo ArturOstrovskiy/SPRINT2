@@ -1,3 +1,4 @@
+/*
 let gold = 100;
 let buildingName = "House";
 let buildingCoast = 64;
@@ -39,18 +40,38 @@ createHouse("Garage", 12);
 
 
 
-
-
-
 function getSalary(amount, salary) {
 	amount += salary;
 	console.log(`Total amount: ${gold}`);
 }
-
 getSalary(20);
 
+*/
 
 
+
+
+
+
+let resource = "lumber"
+
+manageResource()
+
+function manageResource() {
+let resource = "crystals"
+	if (true) {
+let resource = "stone"
+		console.log(resource);
+	}
+	console.log(resource)
+}
+console.log(resource)
+
+if (true) {
+	resource = "gold"
+	console.log(resource)
+}
+console.log(resource)
 
 
 
