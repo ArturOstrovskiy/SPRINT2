@@ -36,6 +36,54 @@ const favoriteBooks = [
 	},
 ]
 
+/*const printBooksAuthors = (books) => {
+	for(let i=0; i<books.length; i++) {
+		const book = books[i];
+		console.log(book.author);
+	}
+}*/
+// printBooksAuthors(favoriteBooks)
+
+/*const printCheapBooks = (books) => {
+	for(let i=0; i<books.length; i++) {
+		const book = books[i];
+		if(book.price < 30) {
+			console.log(`${book.title}:${book.price}`);
+		}
+	}
+}*/
+// printCheapBooks(favoriteBooks)
+
+
+//callback => function
+const processBooks = (books, callback) => {
+	for (let i = 0; i < books.length; i++) {
+		const book = books[i];
+		callback(book);
+	}
+}
+
+// const printAuthors = b => console.log(b.author)
+processBooks(favoriteBooks, b => console.log(b.author))
+
+const printCheapBook = (book) => {
+	if(book.price < 30){
+		console.log(`${book.title}:${book.price}`);
+	}
+}
+processBooks(favoriteBooks,printCheapBook);
+
+favoriteBooks.forEach(printCheapBook);
+favoriteBooks.forEach(b => console.log(b.author));
+
+const cheapBooks = favoriteBooks.filter(book => book.price < 30)
+console.log(cheapBooks);
+
+
+const booksTitle = favoriteBooks.map(b => b.title);
+console.log(booksTitle);
+
+
 
 
 
