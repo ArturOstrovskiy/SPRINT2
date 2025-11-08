@@ -1,4 +1,4 @@
-// DATA => C-U-R-D
+// DATA => C-R-U-D
 
 
 const model = {
