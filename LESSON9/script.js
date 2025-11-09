@@ -36,12 +36,10 @@ const data = {
 	},
 	updateLessonStatus(lessonID){
 		//1. Change DATA immutable
+		// console.log(lessonID);
 		const newData = this.courseData.lessons.map(l => l.id === lessonID ? {...l, isDone: !l.isDone}: l);
+		console.log(lessonID)
 		this.courseData.lessons = newData;
-		// mutable
-		// const lesson = this.courseData.lessons.find(l => l.id === lessonID)
-		// lesson.isDone = !lesson.isDone;
-		//2. Update view
 		data.render();
 	},
 	deleteLesson(lessonID){
@@ -88,8 +86,9 @@ function createTitle(courseDataTitle){
 }
 
 function createList(lessons){
-	const list = document.createElement("ul");
+	const list = document.createElement("ol");
 	list.classList.add("list");
+
 	//элементы списка
 	lessons.forEach((lesson) => {
 		const listItem = document.createElement("li");
@@ -99,7 +98,8 @@ function createList(lessons){
 			listItem.classList.add("done");
 		}
 		listItem.textContent = lesson.title;
-		list.addEventListener("click", () => {
+
+		listItem.addEventListener("click", () => {
 			data.updateLessonStatus(lesson.id);
 		})
 
@@ -133,7 +133,7 @@ function createForm(massageBox){
 		massageBox.textContent = "Добавление курса";
 
 		setTimeout(()=>{
-			// massageBox.textContent = "";
+			massageBox.textContent = "";
 			data.createLesson(value)
 		}, 3000)
 	})
